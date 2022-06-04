@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from '@mui/material'
+import React from 'react'
 
-function App() {
+import { styled } from '@mui/material/styles';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Root>
+      <Grid className={classes.grid} container spacing={0} alignItems="center" justify="center" style={{ height: '100vh'}}>
+        <Grid item xs={12} sm={4} className={classes.mobile}>
+          {/* <Details title="Income" /> */}Income
+        </Grid>
+        <Grid item xs={12} sm={3} className={classes.main}>
+          {/* <Main /> */}Main
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.desktop}>
+          {/* <Details title="Income" /> */}Income
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.last}>
+          {/* <Details title="Expense" /> */}Expense
+        </Grid>
+      </Grid>
+    </Root>
+  )
 }
 
-export default App;
+const PREFIX = 'app';
+
+const classes = {
+  grid: `${PREFIX}_grid`,
+  mobile: `${PREFIX}_mobile`,
+  main: `${PREFIX}_main`,
+  desktop: `${PREFIX}_desktop`,
+  last: `${PREFIX}_last`,
+}
+
+const Root = styled('div')(( { theme }) => ({
+  [`& .${classes.grid}`]: {},
+  [`& .${classes.mobile}`]: {},
+  [`& .${classes.main}`]: {},
+  [`& .${classes.desktop}`]: {},
+  [`& .${classes.last}`]: {},
+}))
+
+export default App
