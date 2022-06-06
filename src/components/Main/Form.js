@@ -117,7 +117,9 @@ const NewTransactionForm = () => {
         <Grid item xs={6}>
           <TextField fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
         </Grid>
-        <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>Create</Button>
+        <Grid item xs={12}>
+          <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>Create</Button>
+        </Grid>
       </Grid>
     </Root>
   )

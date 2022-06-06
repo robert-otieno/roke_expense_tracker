@@ -5,12 +5,12 @@ export const incomeCategories = [
   { type: 'Business', amount: 0, color: incomeColors[0] },
   { type: 'Investments', amount: 0, color: incomeColors[1] },
   { type: 'Extra income', amount: 0, color: incomeColors[2] },
-  { type: 'Deposits', amount: 0, color: incomeColors[3] },
-  { type: 'Lottery', amount: 0, color: incomeColors[4] },
+  // { type: 'Deposits', amount: 0, color: incomeColors[3] },
+  // { type: 'Lottery', amount: 0, color: incomeColors[4] },
   { type: 'Gifts', amount: 0, color: incomeColors[5] },
   { type: 'Salary', amount: 0, color: incomeColors[6] },
   { type: 'Savings', amount: 0, color: incomeColors[7] },
-  { type: 'Rental income', amount: 0, color: incomeColors[8] },
+  { type: 'Loans', amount: 0, color: incomeColors[8] },
 ];
 
 export const expenseCategories = [
@@ -26,9 +26,9 @@ export const expenseCategories = [
   { type: 'Personal', amount: 0, color: expenseColors[9] },
   { type: 'Other', amount: 0, color: expenseColors[10] },
   { type: 'Debt', amount: 0, color: expenseColors[11] },
-  { type: 'Medical', amount: 0, color: expenseColors[2] },
-  { type: 'Gifts', amount: 0, color: expenseColors[3] },
-  { type: 'Church', amount: 0, color: expenseColors[4] },
+  { type: 'Medical', amount: 0, color: expenseColors[12] },
+  { type: 'Gifts', amount: 0, color: expenseColors[13] },
+  { type: 'Church', amount: 0, color: expenseColors[14] },
 ];
 
 
