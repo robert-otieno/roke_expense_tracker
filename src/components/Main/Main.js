@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, Divider, Grid, Typography } from '@mui/material'
 import InfoCard from '../InfoCard'
 import Form from './Form'
-import List from './List'
 
 import { styled } from '@mui/material/styles';
 import { useContext } from 'react';
@@ -22,13 +21,6 @@ const ExpenseTracker = () => {
           <Divider className={classes.divider} />
           <Form />
         </CardContent>
-        <CardContent className={classes.cartContent}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <List />
-            </Grid>
-          </Grid>
-        </CardContent>
       </Card>
     </Root>
   )
@@ -40,7 +32,6 @@ const classes = {
   media: `${PREFIX}_media`,
   expand: `${PREFIX}_expand`,
   expandOpen: `${PREFIX}_expandOpen`,
-  cartContent: `${PREFIX}_cartContent`,
   divider: `${PREFIX}_divider`,
 }
 
@@ -58,9 +49,6 @@ const Root = styled('div')(( { theme }) => ({
   },
   [`& .${classes.expandOpen}`]: {
     transform: 'rotate(180deg)',
-  },
-  [`& .${classes.cartContent}`]: {
-    paddingTop: 0,
   },
   [`& .${classes.divider}`]: {
     margin: '20px 0',
